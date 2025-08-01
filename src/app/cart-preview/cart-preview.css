@@ -1,0 +1,190 @@
+.item-preview {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+}
+
+/* Контейнер для элементов слева */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 70px;
+}
+
+.image-container {
+  width: 60px; /* Уменьшенный размер */
+  height: 60px; /* Уменьшенный размер */
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.item-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.item-title {
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #222;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+/* Кнопки управления - ОБНОВЛЕНО */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-controls button {
+  width: 26px;
+  height: 26px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.quantity-controls button:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.count-display {
+  min-width: 24px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Итоговая сумма */
+.panel > div:last-child {
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border-top: 1px solid #eee;
+  text-align: right;
+}
+
+/* Сообщения */
+.panel > div {
+  padding: 20px 0;
+  text-align: center;
+  color: #777;
+}
+
+.item-preview {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 70px;
+}
+
+.image-container {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.item-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.item-title {
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #222;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-controls button {
+  width: 26px;
+  height: 26px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.quantity-controls button:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.count-display {
+  min-width: 24px;
+  text-align: center;
+  font-size: 15px;
+}

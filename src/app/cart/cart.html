@@ -1,0 +1,37 @@
+<div class="cart-container">
+  <div 
+    class="overlay" 
+    [class.active]="isOpen()" 
+    (click)="close()"></div>
+
+  <div id="sidePanel" class="panel" [class.open]="isOpen()">
+    <div class="menu">
+      <div>
+        Ваша корзина
+      </div>
+      <button (click)="close()">Закрыть</button>
+    </div>
+    
+    <div class="cart-content">
+      @if (items$ | async; as items) {
+        @if (items && items.length > 0) {
+          <div class="cart-items">
+            @for (item of items; track $index) {
+              <app-cart-preview [input]="item" />
+            }
+          </div>
+          <div class="cart-footer">
+            <div class="cart-summary">
+              <div class="cart-price">Стоимость корзины: {{items | sumPipe}} BYN</div>
+              <button class="checkout-button">Оформить заказ</button>
+            </div>
+          </div>
+        } @else {
+          <div class="empty-cart">Корзина пуста</div>
+        }
+      } @else {
+        <div class="loading">Загрузка данных...</div>
+      }
+    </div>
+  </div>
+</div>

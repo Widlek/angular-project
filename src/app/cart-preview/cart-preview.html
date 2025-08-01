@@ -1,0 +1,23 @@
+<div class="item-preview">
+  <!-- Левая часть: элементы управления -->
+  <div class="controls-container">
+    <div class="item-price">{{input.price | currency:'BYN':'symbol':'1.0-0'}}</div>
+    
+    <div class="quantity-controls">
+      <button (click)="removeFromCart()">-</button>
+      <div class="count-display">{{input.count}}</div>
+      <button (click)="addToCart()">+</button>
+    </div>
+  </div>
+  
+  <!-- Правая часть: изображение и название -->
+  <div class="image-container" (click)="selectItem()" [routerLink]="['/item', input.id]">
+    <img [src]="input.img" alt="{{input.name}}" class="item-image">
+  </div>
+  
+  <div class="item-info" (click)="selectItem()" [routerLink]="['/item', input.id]">
+    <a class="item-title">
+      {{input.name}}
+    </a>
+  </div>
+</div>

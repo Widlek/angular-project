@@ -1,0 +1,13 @@
+@if (item$ | async; as item) {
+    <p>{{item.name}}</p>
+    <p>{{item.price}}</p>
+    <button (click)="addToCart(item)">add to cart</button>
+    <button (click)="update(item)">update</button>
+    @for(image of item.images; track $index){
+        <div>123</div>
+    }
+} @else {
+    <div>нужна загрузка с сервера</div>
+}
+
+

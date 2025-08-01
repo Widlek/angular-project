@@ -1,0 +1,16 @@
+
+<div class="item-preview" (click)="selectItem()" [routerLink]="['/item', input.id]">
+  <div class="image-container">
+    <img [src]="input.img" alt="{{input.name}}" class="item-image">
+  </div>
+  
+  <div class="item-info">
+    <a  class="item-title">
+      {{input.name}}
+    </a>
+    
+    <div class="item-price">{{input.price | currency:'BYN':'symbol':'1.0-0'}}</div>
+    
+  </div>
+</div>
+

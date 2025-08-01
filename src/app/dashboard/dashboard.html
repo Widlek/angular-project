@@ -1,0 +1,14 @@
+<div class="wrapper">
+  @if (items$ | async; as items) {
+      @if (items && items.length > 0) {
+        <!-- <div>Товаров: {{items.length}}</div> -->
+        @for (item of items; track item) {
+          <app-item-preview [input]="item" />
+        }
+      } @else {
+        <div>Нет доступных товаров</div>
+      }
+  } @else {
+    <div>Загрузка данных...</div>
+  }
+</div>
