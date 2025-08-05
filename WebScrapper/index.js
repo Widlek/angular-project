@@ -42,7 +42,7 @@ async function getData(){
     let result = [];
 
     const page = await browser.newPage();
-    for(let i = 1; i < 2; i++){
+    for(let i = 1; i < 20; i++){
         let url = `https://catalog.onliner.by/mobile?page=${i}`;
         await page.goto(url);
         

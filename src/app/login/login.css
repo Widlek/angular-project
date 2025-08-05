@@ -1,0 +1,317 @@
+/* Добавим новые стили для брендов */
+/* Base Styles */
+.about-page {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .page-header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 5rem 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #666;
+  }
+  
+  /* Section Common */
+  .section-title {
+    text-align: center;
+    margin: 4rem 0 3rem;
+  }
+  
+  .section-title h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .section-title h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background: #000;
+  }
+  
+  /* About Content */
+  .about-content {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 4rem;
+    align-items: center;
+  }
+  
+  .about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .about-text p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-image {
+    flex: 1;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Principles Grid */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 3rem 0;
+  }
+  
+  .principle-card {
+    padding: 2rem;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+  }
+  
+  .principle-card:hover {
+    border-color: #000;
+  }
+  
+  .principle-card h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .principle-card p {
+    color: #666;
+    font-weight: 300;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 4rem 0;
+    border-top: 1px solid #eee;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-info h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-info p {
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+  }
+  
+  .contact-form {
+    flex: 1;
+  }
+  
+  .contact-form h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+    background: transparent;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #000;
+  }
+  
+  textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 12px 30px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+  
+  /* Footer */
+  .page-footer {
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    font-weight: 300;
+    color: #666;
+  }
+  
+  .page-footer p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-content,
+    .contact-wrapper {
+      flex-direction: column;
+    }
+    
+    .hero {
+      padding: 3rem 0;
+    }
+    
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+    
+    .section-title h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+.brands-section {
+    padding: 4rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  
+  .brand-logo {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid #eee;
+    transition: all 0.3s;
+  }
+  
+  .brand-logo:hover {
+    border-color: #000;
+    background: #f9f9f9;
+  }
+  
+  /* Обновим логотип */
+  .logo span {
+    font-weight: 300;
+  }
+  
+  /* Обновим форму */
+  .contact-form select.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    -webkit-appearance: none;
+    padding: 12px 0;
+  }
+  
+  .contact-form select.form-control:focus {
+    outline: none;
+    border-color: #000;
+  }

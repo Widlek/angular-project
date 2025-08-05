@@ -1,1 +1,151 @@
-<p>login works!</p>
+<div class="about-page">
+    <!-- Header -->
+    <header class="page-header">
+      <div class="header-content">
+        <h1 class="logo">PHONE<span>STORE</span></h1>
+        <nav>
+          <!-- Навигация будет в основном компоненте -->
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h2>Технологии в чистом виде</h2>
+        <p>С 2015 года предоставляем лучшие мобильные решения</p>
+      </div>
+    </section>
+  
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="section-title">
+          <h3>О нашем магазине</h3>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <p>PhoneStore — это премиальное пространство для ценителей мобильных технологий. Мы специализируемся на продаже смартфонов от ведущих мировых брендов с гарантией подлинности.</p>
+            <p>Основанный в Москве как небольшой бутик, сегодня мы превратились в крупный онлайн-ритейлер с более чем 500 000 довольных клиентов по всей России. Наш ассортимент включает новейшие флагманы и проверенные временем модели.</p>
+            <p>Мы не просто продаем телефоны — мы помогаем найти идеальное устройство, соответствующее вашему стилю жизни и потребностям.</p>
+          </div>
+          <div class="about-image">
+            <img src="https://via.placeholder.com/600x400/FFFFFF/000000?text=Premium+Phones+Selection" alt="Коллекция смартфонов">
+          </div>
+        </div>
+  
+        <div class="section-title">
+          <h3>Наши принципы</h3>
+        </div>
+  
+        <div class="principles-grid">
+          <div class="principle-card">
+            <h4>Только оригиналы</h4>
+            <p>Все устройства поставляются напрямую от производителей с полным пакетом документов</p>
+          </div>
+          <div class="principle-card">
+            <h4>Экспертный подход</h4>
+            <p>Наши консультанты помогут выбрать телефон именно под ваши задачи</p>
+          </div>
+          <div class="principle-card">
+            <h4>Прозрачные условия</h4>
+            <p>Никаких скрытых платежей или навязанных услуг</p>
+          </div>
+          <div class="principle-card">
+            <h4>Забота после покупки</h4>
+            <p>Гарантия и сервисная поддержка на весь срок эксплуатации</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Brands Section -->
+    <section class="brands-section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Бренды, которым мы доверяем</h3>
+        </div>
+        
+        <div class="brands-grid">
+          <div class="brand-logo">APPLE</div>
+          <div class="brand-logo">SAMSUNG</div>
+          <div class="brand-logo">XIAOMI</div>
+          <div class="brand-logo">GOOGLE</div>
+          <div class="brand-logo">ONEPLUS</div>
+          <div class="brand-logo">HONOR</div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Свяжитесь с нами</h3>
+        </div>
+  
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h4>Контакты</h4>
+            <p>Мы поможем с выбором и ответим на все вопросы</p>
+            
+            <ul>
+              <li>Москва, ул. Технологическая, 15</li>
+              <li>Пн-Пт: 09:00—21:00</li>
+              <li>Сб-Вс: 10:00—20:00</li>
+              <li></li>
+              <li>+7 (495) 123-45-67</li>
+            </ul>
+          </div>
+  
+          <div class="contact-form">
+            <h4>Форма обратной связи</h4>
+            <form [formGroup]="userForm" novalidate (ngSubmit)="submit()">
+              <div class="form-group">
+                <label for="name">Ваше имя</label>
+                @if(userForm.controls["userName"].invalid && userForm.controls["userName"].touched){
+                    <div class="alert">Не указано имя</div>
+                }
+                <input type="text" id="name" class="form-control" formControlName="userName" placeholder="Александр Петров">
+              </div>
+              
+              <div class="form-group">
+                <label for="email">E-Mail</label>
+                @if(userForm.controls["email"].invalid && userForm.controls["email"].touched){
+                    <div class="alert">Некорректный email</div>
+                }
+                <input type="tel" id="email" class="form-control" formControlName="email" placeholder="myemail@gmail.com">
+              </div>
+              
+              <div class="form-group">
+                <label for="question">Вопрос</label>
+                <select formControlName="questionType" id="question" class="form-control">
+                  <option value="">Выберите тему вопроса</option>
+                  <option value="selection">Помощь в подборе телефона</option>
+                  <option value="delivery">Доставка и оплата</option>
+                  <option value="warranty">Гарантия и сервис</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" formControlName="text" class="form-control" rows="4" placeholder="Ваш вопрос..."></textarea>
+              </div>
+              
+              <button type="submit" class="submit-btn" [disabled]="userForm.invalid">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <p>© 2023 PHONESTORE. Официальный партнер ведущих брендов</p>
+        <p>Технологии. Простота. Надежность.</p>
+      </div>
+    </footer>
+  </div>
